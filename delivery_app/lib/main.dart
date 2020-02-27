@@ -76,10 +76,10 @@ class MyApp extends StatelessWidget {
           '/credit': (ctx) => PaymentPage(),
           '/creditpay': (ctx) => CreditCardPage(),
           '/profile': (ctx) => ProfilePage(),
-          //'/rating' : (ctx) =>  Rating(),
           '/incomingrequest': (ctx) => IncomingRequest(),
           '/parcelSettings': (ctx) => ParcelSettings(),
           '/charts': (ctx) => ChartPage(),
+          
         },
       ),
     );
