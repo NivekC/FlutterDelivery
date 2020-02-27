@@ -1,0 +1,505 @@
+
+// class IPhone1Widget extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Container(
+//         constraints: BoxConstraints.expand(),
+//         decoration: BoxDecoration(
+//           color: Color.fromARGB(255, 255, 255, 255),
+//         ),
+//         child: Column(
+//           crossAxisAlignment: CrossAxisAlignment.stretch,
+//           children: [
+//             Align(
+//               alignment: Alignment.topRight,
+//               child: Container(
+//                 width: 40,
+//                 margin: EdgeInsets.only(top: 70, right: 23),
+//                 child: Text(
+//                   "Skip",
+//                   textAlign: TextAlign.left,
+//                  style: TextStyle(
+//                     color: Color.fromARGB(255, 0, 35, 110),
+//                     fontWeight: FontWeight.w400,
+//                     fontSize: 14,
+//                   ),
+//                 ),
+//               ),
+//             ),
+//             Container(
+//               height: 252,
+//               margin: EdgeInsets.only(left: 20, top: 29, right: 20),
+//               child: Image.asset(
+//                 "assets/images/request-pickup.jpg",
+//                 fit: BoxFit.cover,
+//               ),
+//             ),
+//             Align(
+//               alignment: Alignment.topLeft,
+//               child: Container(
+//                 margin: EdgeInsets.only(left: 75, top: 43),
+//                 child: Text(
+//                   "REQUEST PICKUP",
+//                   textAlign: TextAlign.center,
+//                   style: TextStyle(
+//                     color: Color.fromARGB(255, 0, 35, 110),
+//                     fontWeight: FontWeight.w400,
+//                     fontSize: 24,
+//                   ),
+//                 ),
+//               ),
+//             ),
+//             Align(
+//               alignment: Alignment.topRight,
+//               child: Container(
+//                 width: 315,
+//                 margin: EdgeInsets.only(top: 21, right: 20),
+//                 child: Text(
+//                   "Tell us who you're sending it to, what you're sending and when it's best to pickup the package and we will pick it up at the most convenient time",
+//                   textAlign: TextAlign.center,
+//                   style: TextStyle(
+//                     color: AppColors.primaryText,
+//                     fontWeight: FontWeight.w400,
+//                     fontSize: 14,
+//                   ),
+//                 ),
+//               ),
+//             ),
+//             Spacer(),
+//             Align(
+//               alignment: Alignment.topLeft,
+//               child: Container(
+//                 width: 40,
+//                 height: 8,
+//                 margin: EdgeInsets.only(left: 164, bottom: 21),
+//                 child: Image.asset(
+//                   "assets/images/pagination.png",
+//                   fit: BoxFit.none,
+//                 ),
+//               ),
+//             ),
+//             Align(
+//               alignment: Alignment.topCenter,
+//               child: Container(
+//                 width: 315,
+//                 height: 50,
+//                 margin: EdgeInsets.only(bottom: 22),
+//                 child: Stack(
+//                   alignment: Alignment.center,
+//                   children: [
+//                     Positioned(
+//                       bottom: 15,
+//                       child: Text(
+//                         "Next",
+//                         textAlign: TextAlign.center,
+//                         style: TextStyle(
+//                           color: Color.fromARGB(255, 255, 255, 255),
+//                           fontWeight: FontWeight.w400,
+//                           fontSize: 20,
+//                         ),
+//                       ),
+//                     ),
+//                     Positioned(
+//                       bottom: 0,
+//                       child: Container(
+//                         width: 315,
+
+//                        height: 50,
+//                         decoration: BoxDecoration(
+//                           color: Color.fromARGB(255, 69, 69, 218),
+//                           boxShadow: [
+//                             Shadows.secondaryShadow,
+//                           ],
+//                           borderRadius: BorderRadius.all(Radius.circular(6)),
+//                         ),
+//                         child: Container(),
+//                       ),
+//                     ),
+//                     Positioned(
+//                       bottom: 15,
+//                       child: Text(
+//                         "Next",
+//                         textAlign: TextAlign.center,
+//                         style: TextStyle(
+//                           color: Color.fromARGB(255, 255, 255, 255),
+//                           fontWeight: FontWeight.w400,
+//                           fontSize: 20,
+//                         ),
+//                       ),
+//                     ),
+//                   ],
+//                 ),
+
+//              ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+
+
+
+SETTINGS_1 PAYMENTS
+
+import 'package:delivery_project/values/values.dart';
+import 'package:flutter/material.dart';
+
+class Settings1Widget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        constraints: BoxConstraints.expand(),
+        decoration: BoxDecoration(
+          color: Color.fromARGB(255, 255, 255, 255),
+        ),
+
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              height: 68,
+              child: Stack(
+                alignment: Alignment.topCenter,
+
+                children: [
+                  Positioned(
+                    left: 0,
+                    top: 0,
+                    right: 0,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Container(
+                          height: 20,
+                          child: Container(),
+                        ),
+
+                        Container(
+                          height: 17,
+                          margin: EdgeInsets.only(left: 16, top: 16, right: 15),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Align(
+                                alignment: Alignment.topLeft,
+                                child: Container(
+                                  width: 17,
+                                  height: 16,
+                                  child: Image.asset(
+                                    "assets/images/menu-3.png",
+                                    fit: BoxFit.none,
+                                  ),
+                                ),
+                              ),
+
+                              Spacer(),
+                              Align(
+                                alignment: Alignment.topLeft,
+                                child: Container(
+                                  width: 4,
+                                  height: 16,
+                                  margin: EdgeInsets.only(top: 1),
+                                  child: Image.asset(
+                                    "assets/images/more.png",
+                                    fit: BoxFit.none,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  Positioned(
+                    top: 34,
+                    child: Text(
+                      "Payment",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: AppColors.secondaryText,
+                        fontFamily: "Arial",
+                        fontWeight: FontWeight.w700,
+                        fontSize: 14,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            Container(
+              height: 125,
+              margin: EdgeInsets.only(left: 19, top: 146, right: 9),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                      width: 163,
+                      height: 120,
+                      margin: EdgeInsets.only(top: 5),
+                      decoration: BoxDecoration(
+                      color: AppColors.secondaryBackground,
+                      ),
+
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            width: 17,
+                            height: 17,
+                            margin: EdgeInsets.only(left: 24, top: 24),
+                            child: Image.asset(
+                              "assets/images/symbol-144--2.png",
+                              fit: BoxFit.none,
+                            ),
+                          ),
+
+                          Align(
+                            alignment: Alignment.topCenter,
+                            child: Container(
+                              margin: EdgeInsets.only(top: 18),
+                              child: Text(
+                                "CARD",
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                  color: AppColors.secondaryText,
+                                  fontFamily: "Arial",
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 15,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  Spacer(),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                      width: 163,
+                      height: 120,
+                      decoration: BoxDecoration(
+                      color: AppColors.secondaryBackground,
+                      ),
+                      child: Column(
+                        children: [
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Container(
+                              width: 17,
+                              height: 17,
+                              margin: EdgeInsets.only(left: 24, top: 34),
+                              child: Image.asset(
+                               "assets/images/symbol-6--3.png",
+                               fit: BoxFit.none,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(top: 14),
+                            child: Text(
+                              "MPESA",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: AppColors.secondaryText,
+                                fontFamily: "Arial",
+                                fontWeight: FontWeight.w700,
+                                fontSize: 15,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Align(
+              alignment: Alignment.topLeft,
+              child: Container(
+                width: 163,
+                height: 120,
+                margin: EdgeInsets.only(left: 100, top: 70),
+                decoration: BoxDecoration(
+                  color: AppColors.secondaryBackground,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 17,
+                      height: 17,
+                      margin: EdgeInsets.only(left: 34, top: 33),
+                      child: Image.asset(
+                        "assets/images/favorite-2.png",
+                        fit: BoxFit.none,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 55, top: 15),
+                      child: Text(
+                        "CASH",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: AppColors.secondaryText,
+                          fontFamily: "Arial",
+                          fontWeight: FontWeight.w700,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+AVACADO
+//import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
+//import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+class AvocadoPage extends StatelessWidget {
+  static final String path = "F:\flutter projects\Parcel_Delivery\delivery_app\assets\images\Receive_package.jpg";
+  //final String image = avocadoF;
+
+
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      body: Stack(
+        children: <Widget>[
+          Container(
+            height: 450,
+            decoration: BoxDecoration(
+            // image: DecorationImage(image: CachedNetworkImageProvider(image),fit: BoxFit.cover)
+            ),
+          ),
+          AppBar(
+            elevation: 0,
+            backgroundColor: Colors.transparent,
+            actions: <Widget>[
+              IconButton(
+                icon: Icon(Icons.more_vert),
+                onPressed: (){},
+              )
+            ],
+          ),
+      
+          Positioned(            
+            top: 350,
+            left: 0,
+            right: 0,
+            child: Container(
+              padding: const EdgeInsets.all(30.0),
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(60.0),
+                  topRight: Radius.circular(60.0)
+                )
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text("Avocado", style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold
+                  ),),
+                  SizedBox(height: 10.0),
+                  Text("\$1.80 / Kg", style: TextStyle(
+                    fontSize: 16.0
+                  ),),
+                  Row(
+                    children: <Widget>[
+                      Text("100 gms for 1-2 pieces", style: TextStyle(
+                        color: Colors.grey.shade700
+                      ),),
+                      Spacer(),
+                      Icon(FontAwesomeIcons.fire, size: 14.0, color: Colors.pink.shade300,),
+                      Text("160"),
+                    ],
+                  ),
+                  SizedBox(height: 20.0),
+                  Slider(
+                    onChanged: (value){},
+                    min: 1,
+                    max: 5,
+                    value: 1.5,
+
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Text("1.5 kg (12-14 pieces approx.)", style: TextStyle(
+                        color: Colors.grey.shade700
+                      )),
+                      Spacer(),
+                      Text("\$ 2.70", style: TextStyle(
+                        fontSize: 16.0
+                      ),),
+                    ],
+                  ),
+                  SizedBox(height: 20.0),
+                  SizedBox(width: double.infinity,
+                    child: RaisedButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5.0)
+                      ),
+                      color: Colors.blue[200],
+                      textColor: Colors.white,
+                      child: Text("Add to Cart"),
+                      onPressed: (){},
+                    )
+                  ),
+                  SizedBox(height: 10.0),
+                  Center(child: Icon(Icons.keyboard_arrow_up)),
+                  Center(child: Text("Know More", style: TextStyle(
+                    color: Colors.pink.shade300
+                  ),),),
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            top: 365,
+            right: 40,
+            child: CircleAvatar(
+              radius: 20.0,
+              foregroundColor: Colors.grey,
+              backgroundColor: Colors.grey.shade200,
+              child: Icon(Icons.favorite_border)),
+          )
+        ],
+      ),
+    );
+  }
+}
