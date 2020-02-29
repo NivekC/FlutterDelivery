@@ -3,6 +3,7 @@
 import 'package:delivery_app/ParcelGuy/Chart.dart';
 import 'package:delivery_app/ParcelGuy/IncomingR.dart';
 import 'package:delivery_app/ParcelGuy/Settings.dart';
+import 'package:delivery_app/navbar.dart';
 import 'package:delivery_app/paymentpage/debit_card.dart';
 import 'package:delivery_app/paymentpage/payment_page.dart';
 import 'package:delivery_app/widgets/Home.dart';
@@ -60,7 +61,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: IncomingRequest(),
+        home: NavBar(),
         routes: {
           '/sign-in': (ctx) => SignIn(),
           '/intro-one': (ctx) => LandingPageOne(),
