@@ -25,7 +25,7 @@ class LandingPageOne extends StatelessWidget {
       ),
       body: Container(
         width: double.infinity,
-        color: Colors.green,
+        color: Colors.white,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [

@@ -18,20 +18,18 @@ class _ChartPageState extends State<ChartPage> {
 
   _generateData() {
     var data1 = [
-      new Pollution(1980, 'USA', 30),
-      new Pollution(1980, 'Asia', 40),
-      new Pollution(1980, 'Europe', 10),
+      new Pollution(1980, 'Jan', 80),
+     
     ];
     var data2 = [
-      new Pollution(1985, 'USA', 100),
-      new Pollution(1980, 'Asia', 150),
-      new Pollution(1985, 'Europe', 80),
+      new Pollution(1985, 'Feb', 140),
+    
     ];
     var data3 = [
-      new Pollution(1985, 'USA', 200),
-      new Pollution(1980, 'Asia', 300),
-      new Pollution(1985, 'Europe', 180),
+      new Pollution(1985, 'March', 250),
+     
     ];
+    
 
     var piedata = [
       new Task('Work', 35.8, Color(0xff3366cc)),
@@ -43,12 +41,12 @@ class _ChartPageState extends State<ChartPage> {
     ];
 
     var linesalesdata = [
-      new Sales(0, 45),
+      new Sales(0, 0),
       new Sales(1, 56),
-      new Sales(2, 55),
-      new Sales(3, 60),
-      new Sales(4, 61),
-      new Sales(5, 70),
+      new Sales(2, 45),
+      // new Sales(3, 60),
+      // new Sales(4, 61),
+      // new Sales(5, 70),
     ];
 
     _seriesData.add(
@@ -151,7 +149,7 @@ class _ChartPageState extends State<ChartPage> {
                     child: Column(
                       children: <Widget>[
                         Text(
-                          'SO₂ emissions, by world region (in million tonnes)',
+                          'Revenue collected in Ksh(thousands)',
                           style: TextStyle(
                               fontSize: 24.0, fontWeight: FontWeight.bold),
                         ),
@@ -222,7 +220,7 @@ class _ChartPageState extends State<ChartPage> {
                     child: Column(
                       children: <Widget>[
                         Text(
-                          'Sales for the first 5 years',
+                          'Sales for the first 2 years',
                           style: TextStyle(
                               fontSize: 24.0, fontWeight: FontWeight.bold),
                         ),
@@ -243,12 +241,7 @@ class _ChartPageState extends State<ChartPage> {
                                         charts.BehaviorPosition.start,
                                     titleOutsideJustification: charts
                                         .OutsideJustification.middleDrawArea),
-                                new charts.ChartTitle(
-                                  'Departments',
-                                  behaviorPosition: charts.BehaviorPosition.end,
-                                  titleOutsideJustification: charts
-                                      .OutsideJustification.middleDrawArea,
-                                )
+                          
                               ]),
                         ),
                       ],
