@@ -9,6 +9,7 @@ import 'package:delivery_app/paymentpage/payment_page.dart';
 import 'package:delivery_app/widgets/Home.dart';
 import 'package:delivery_app/widgets/PaymentsOptions.dart';
 import 'package:delivery_app/widgets/code.dart';
+import 'package:delivery_app/widgets/confirmOrder.dart';
 // import 'package:delivery_app/widgets/credit_card_form.dart';
 // import 'package:delivery_app/widgets/credit_card_widget.dart';
 import 'package:delivery_app/widgets/deliveryDetails.dart';
@@ -26,6 +27,7 @@ import 'package:provider/provider.dart';
 import 'States/app_state.dart';
 import 'providers/auth.dart';
 
+import 'widgets/pickupDetails.dart';
 import 'widgets/sign_in.dart';
 
 void main() => runApp(MyApp());
@@ -61,7 +63,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: NavBar(),
+        home:DeliveryDetails(),
         routes: {
           '/sign-in': (ctx) => SignIn(),
           '/intro-one': (ctx) => LandingPageOne(),
@@ -80,6 +82,8 @@ class MyApp extends StatelessWidget {
           '/incomingrequest': (ctx) => IncomingRequest(),
           '/parcelSettings': (ctx) => ParcelSettings(),
           '/charts': (ctx) => ChartPage(),
+          '/confirmOrder': (ctx) => ConfirmOrderPage(),
+           '/pickup': (ctx) => PickupDetails(),
           
         },
       ),

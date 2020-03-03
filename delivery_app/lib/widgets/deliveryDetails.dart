@@ -9,18 +9,26 @@ class DeliveryDetails extends StatefulWidget {
 }
 
 class _DeliveryDetailsState extends State<DeliveryDetails> {
- 
+  final _addresscontroller = TextEditingController();
+  final _recepientcontroller = TextEditingController();
+  final _packagecontroller = TextEditingController();
+  final _instructionscontroller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-            gradient: LinearGradient(begin: Alignment.topCenter, colors: [
-          Colors.blue[300],
-          Colors.blue[300],
-          Colors.blue[300],
-        ])),
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            colors: [
+              Colors.blue[100],
+              Colors.blue[100],
+              Colors.blue[100],
+            ],
+          ),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -35,18 +43,21 @@ class _DeliveryDetailsState extends State<DeliveryDetails> {
                   FadeAnimation(
                       1,
                       Text(
-                        "Sign Up",
+                        "Delivery Details",
                         style: TextStyle(color: Colors.white, fontSize: 50),
                       )),
                   SizedBox(
                     height: 10,
                   ),
-                  FadeAnimation(
+                  Center(
+                    child: FadeAnimation(
                       1.3,
-                      Text(
-                        "Welcome OnBoard!",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
-                      )),
+                      Image.asset(
+                        'assets/images/Request_pickup.jpg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -67,7 +78,7 @@ class _DeliveryDetailsState extends State<DeliveryDetails> {
                       Column(
                         children: <Widget>[
                           SizedBox(
-                            height: 10,
+                            height: 5,
                           ),
 
                           FadeAnimation(
@@ -91,17 +102,20 @@ class _DeliveryDetailsState extends State<DeliveryDetails> {
                                             bottom: BorderSide(
                                                 color: Colors.grey[200]))),
                                     child: TextFormField(
-                                   
+                                      controller: _addresscontroller,
                                       decoration: InputDecoration(
-                                          hintText: "Location",
+                                          hintText: "Address",
                                           icon: const Padding(
                                             padding:
                                                 const EdgeInsets.only(top: 5.0),
-                                            child: const Icon(Icons.location_on),
+                                            child: const Icon(Icons.email),
                                           ),
                                           hintStyle:
                                               TextStyle(color: Colors.black),
-                                          border: InputBorder.none),                                   
+                                          border: InputBorder.none),
+                                      onSaved: (value) {
+                                        _addresscontroller.text = value;
+                                      },
                                     ),
                                   ),
                                   Container(
@@ -111,20 +125,90 @@ class _DeliveryDetailsState extends State<DeliveryDetails> {
                                             bottom: BorderSide(
                                                 color: Colors.grey[200]))),
                                     child: TextFormField(
-                                   
+                                      controller: _packagecontroller,
                                       decoration: InputDecoration(
-                                          hintText: "Enter Recepient Details",
+                                          hintText: "Package Details",
                                           icon: const Padding(
                                             padding:
                                                 const EdgeInsets.only(top: 5.0),
-                                            child: const Icon(Icons.details),
+                                            child: const Icon(
+                                                Icons.check_box_outline_blank),
                                           ),
                                           hintStyle:
                                               TextStyle(color: Colors.black),
-                                          border: InputBorder.none),                                   
+                                          border: InputBorder.none),
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return 'Please enter package details';
+                                        }
+                                        return null;
+                                      },
+                                      onSaved: (value) {
+                                        _packagecontroller.text = value;
+                                      },
                                     ),
                                   ),
-                                  
+                                  Container(
+                                    padding: EdgeInsets.all(10),
+                                    decoration: BoxDecoration(
+                                        border: Border(
+                                            bottom: BorderSide(
+                                                color: Colors.grey[200]))),
+                                    child: TextFormField(
+                                      controller: _recepientcontroller,
+                                      decoration: InputDecoration(
+                                          hintText: "Recepients Number",
+                                          icon: const Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 5.0),
+                                            child: const Icon(
+                                                Icons.confirmation_number),
+                                          ),
+                                          hintStyle:
+                                              TextStyle(color: Colors.black),
+                                          border: InputBorder.none),
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return 'Please Input Recepients Number';
+                                        }
+                                        return null;
+                                      },
+                                      onSaved: (value) {
+                                        _recepientcontroller.text = value;
+                                      },
+                                    ),
+                                  ),
+                                  Container(
+                                    padding: EdgeInsets.all(10),
+                                    decoration: BoxDecoration(
+                                        border: Border(
+                                            bottom: BorderSide(
+                                                color: Colors.grey[200]))),
+                                    child: TextFormField(
+                                      controller: _instructionscontroller,
+                                      decoration: InputDecoration(
+                                          hintText:
+                                              "Delivery Instructions(Eg: House Number)",
+                                          icon: const Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 5.0),
+                                            child: const Icon(
+                                                Icons.speaker_notes),
+                                          ),
+                                          hintStyle:
+                                              TextStyle(color: Colors.black),
+                                          border: InputBorder.none),
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return 'Please enter delivery instructions ';
+                                        }
+                                        return null;
+                                      },
+                                      onSaved: (value) {
+                                        _instructionscontroller.text = value;
+                                      },
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
@@ -142,14 +226,15 @@ class _DeliveryDetailsState extends State<DeliveryDetails> {
                                 child: RaisedButton(
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
-                                            new BorderRadius.circular(20),),
+                                            new BorderRadius.circular(20)),
                                     color: Colors.blue[300],
-                                    onPressed: () {
-                                  Navigator.of(context).pushNamed('/sign-in');
+                                    onPressed: () async {
+                                      Navigator.of(context)
+                                          .pushNamed('/pickup');
                                     },
                                     child: Center(
                                       child: Text(
-                                        "Sign Up",
+                                        "Next",
                                         style: TextStyle(
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold),
@@ -177,13 +262,6 @@ class _DeliveryDetailsState extends State<DeliveryDetails> {
                               onPressed: () {
                                 Navigator.of(context).pushNamed('/sign-in');
                               },
-                              child: Center(
-                                  child: Text(
-                                "Already have an account?",
-                                style: TextStyle(
-                                    color: Colors.blue,
-                                    fontStyle: FontStyle.normal),
-                              )),
                             ),
                           )
 

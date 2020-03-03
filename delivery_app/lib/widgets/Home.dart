@@ -114,7 +114,7 @@ class _MapState extends State<Map> {
                   right: 15.0,
                   left: 15.0,
                   child: Container(
-                    height: 50.0,
+                    height: 55.0,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(3.0),
