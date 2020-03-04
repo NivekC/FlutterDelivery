@@ -1,3 +1,4 @@
+import 'package:delivery_app/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:delivery_app/const/themeColor.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -33,6 +34,7 @@ class _LocationState extends State<Location> {
         backgroundColor: Colors.blue[300],
         title: Text('Track Your Order'),
       ),
+      drawer: AppDrawer(),
       body: Center(
         child: Container(
           height: MediaQuery.of(context).size.height,

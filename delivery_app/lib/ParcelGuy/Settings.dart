@@ -17,7 +17,7 @@ class ParcelSettings extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.white,
       ),
-      drawer: ParcelDrawer(),
+     
       body: Container(
         height: MediaQuery.of(context).size.height / 1,
         padding: EdgeInsets.all(0),
@@ -57,7 +57,7 @@ class ParcelSettings extends StatelessWidget {
                       ),
                     ),
                     onTap: () {
-                      Navigator.of(context).pushNamed('/profile');
+                      Navigator.of(context).pushNamed('/Parcelprofile');
                     },
                   ),
                 ],

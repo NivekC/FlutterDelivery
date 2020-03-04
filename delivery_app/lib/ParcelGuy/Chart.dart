@@ -19,17 +19,13 @@ class _ChartPageState extends State<ChartPage> {
   _generateData() {
     var data1 = [
       new Pollution(1980, 'Jan', 80),
-     
     ];
     var data2 = [
       new Pollution(1985, 'Feb', 140),
-    
     ];
     var data3 = [
       new Pollution(1985, 'March', 250),
-     
     ];
-    
 
     var piedata = [
       new Task('Work', 35.8, Color(0xff3366cc)),
@@ -122,24 +118,29 @@ class _ChartPageState extends State<ChartPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: DefaultTabController(
-        length: 3,
+        length: 2,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Color(0xff1976d2),
+            backgroundColor: Colors.blue,
             //backgroundColor: Color(0xff308e1c),
+           
             bottom: TabBar(
               indicatorColor: Color(0xff9962D0),
               tabs: [
                 Tab(
                   icon: Icon(FontAwesomeIcons.solidChartBar),
                 ),
-                Tab(icon: Icon(FontAwesomeIcons.chartPie)),
-                Tab(icon: Icon(FontAwesomeIcons.chartLine)),
+                // Tab(icon: Icon(FontAwesomeIcons.chartPie)),
+                Tab(
+                  icon: Icon(FontAwesomeIcons.chartLine),
+                ),
               ],
             ),
-            title: Text('Flutter Charts'),
+            title: Text(
+              'Revenue Overview',
+              style: TextStyle(color: Colors.white),
+            ),
           ),
-          drawer: ParcelDrawer(),
           body: TabBarView(
             children: [
               Padding(
@@ -167,52 +168,52 @@ class _ChartPageState extends State<ChartPage> {
                   ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Container(
-                  child: Center(
-                    child: Column(
-                      children: <Widget>[
-                        Text(
-                          'Time spent on daily tasks',
-                          style: TextStyle(
-                              fontSize: 24.0, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: 10.0,
-                        ),
-                        Expanded(
-                          child: charts.PieChart(_seriesPieData,
-                              animate: true,
-                              animationDuration: Duration(seconds: 5),
-                              behaviors: [
-                                new charts.DatumLegend(
-                                  outsideJustification:
-                                      charts.OutsideJustification.endDrawArea,
-                                  horizontalFirst: false,
-                                  desiredMaxRows: 2,
-                                  cellPadding: new EdgeInsets.only(
-                                      right: 4.0, bottom: 4.0),
-                                  entryTextStyle: charts.TextStyleSpec(
-                                      color: charts
-                                          .MaterialPalette.purple.shadeDefault,
-                                      fontFamily: 'Georgia',
-                                      fontSize: 11),
-                                )
-                              ],
-                              defaultRenderer: new charts.ArcRendererConfig(
-                                  arcWidth: 100,
-                                  arcRendererDecorators: [
-                                    new charts.ArcLabelDecorator(
-                                        labelPosition:
-                                            charts.ArcLabelPosition.inside)
-                                  ])),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              // Padding(
+              //   padding: EdgeInsets.all(8.0),
+              //   child: Container(
+              //     child: Center(
+              //       child: Column(
+              //         children: <Widget>[
+              //           Text(
+              //             'Time spent on daily tasks',
+              //             style: TextStyle(
+              //                 fontSize: 24.0, fontWeight: FontWeight.bold),
+              //           ),
+              //           SizedBox(
+              //             height: 10.0,
+              //           ),
+              //           Expanded(
+              //             child: charts.PieChart(_seriesPieData,
+              //                 animate: true,
+              //                 animationDuration: Duration(seconds: 5),
+              //                 behaviors: [
+              //                   new charts.DatumLegend(
+              //                     outsideJustification:
+              //                         charts.OutsideJustification.endDrawArea,
+              //                     horizontalFirst: false,
+              //                     desiredMaxRows: 2,
+              //                     cellPadding: new EdgeInsets.only(
+              //                         right: 4.0, bottom: 4.0),
+              //                     entryTextStyle: charts.TextStyleSpec(
+              //                         color: charts
+              //                             .MaterialPalette.purple.shadeDefault,
+              //                         fontFamily: 'Georgia',
+              //                         fontSize: 11),
+              //                   )
+              //                 ],
+              //                 defaultRenderer: new charts.ArcRendererConfig(
+              //                     arcWidth: 100,
+              //                     arcRendererDecorators: [
+              //                       new charts.ArcLabelDecorator(
+              //                           labelPosition:
+              //                               charts.ArcLabelPosition.inside)
+              //                     ])),
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //   ),
+              // ),
               Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Container(
@@ -241,7 +242,6 @@ class _ChartPageState extends State<ChartPage> {
                                         charts.BehaviorPosition.start,
                                     titleOutsideJustification: charts
                                         .OutsideJustification.middleDrawArea),
-                          
                               ]),
                         ),
                       ],

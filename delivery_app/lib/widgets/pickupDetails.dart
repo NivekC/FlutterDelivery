@@ -23,11 +23,11 @@ class _PickupDetailsState extends State<PickupDetails> {
         elevation: 0,
         title: Text(
           'PickUp Details',
-          style: TextStyle(color: Colors.blue),
+          style: TextStyle(color: Colors.white),
         ),
-        iconTheme: IconThemeData(color: Colors.blue),
+        iconTheme: IconThemeData(color: Colors.white),
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.blue[300],
       ),
       drawer: AppDrawer(),
       body: Container(
@@ -36,9 +36,9 @@ class _PickupDetailsState extends State<PickupDetails> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             colors: [
-              Colors.white,
-              Colors.white,
-              Colors.white,
+              Colors.blue[300],
+              Colors.blue[300],
+              Colors.blue[300],
             ],
           ),
         ),
@@ -53,12 +53,13 @@ class _PickupDetailsState extends State<PickupDetails> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  FadeAnimation(
-                      1,
-                      Text(
-                        "Pickup Details",
-                        style: TextStyle(color: Colors.white, fontSize: 50),
-                      )),
+                  // FadeAnimation(
+                  //   1,
+                  //   // Text(
+                  //   //   "Pickup Details",
+                  //   //   style: TextStyle(color: Colors.white, fontSize: 50),
+                  //   // ),
+                  // ),
                   SizedBox(
                     height: 10,
                   ),
@@ -97,7 +98,6 @@ class _PickupDetailsState extends State<PickupDetails> {
                           FadeAnimation(
                             1.4,
                             Container(
-                             
                               padding: EdgeInsets.only(top: 5),
                               decoration: BoxDecoration(
                                   color: Colors.white,
@@ -202,31 +202,32 @@ class _PickupDetailsState extends State<PickupDetails> {
                           ),
 
                           FadeAnimation(
-                              1.6,
-                              Container(
-                                height: MediaQuery.of(context).size.height / 17,
-                                margin: EdgeInsets.symmetric(horizontal: 50),
-                                child: RaisedButton(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            new BorderRadius.circular(20)),
-                                    color: Colors.blue[300],
-                                    onPressed: () async {
-                                      Navigator.of(context)
-                                          .pushNamed('/confirmOrder');
-                                    },
-                                    child: Center(
-                                      child: Text(
-                                        "Next",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    )),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(30),
-                                    color: Colors.blue[300]),
-                              )),
+                            1.6,
+                            Container(
+                              height: MediaQuery.of(context).size.height / 17,
+                              margin: EdgeInsets.symmetric(horizontal: 50),
+                              child: RaisedButton(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          new BorderRadius.circular(20)),
+                                  color: Colors.blue[300],
+                                  onPressed: () async {
+                                    Navigator.of(context)
+                                        .pushNamed('/confirmOrder');
+                                  },
+                                  child: Center(
+                                    child: Text(
+                                      "Next",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  )),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30),
+                                  color: Colors.blue[300]),
+                            ),
+                          ),
 
                           //
                         ],

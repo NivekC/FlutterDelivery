@@ -1,3 +1,4 @@
+import 'package:delivery_app/Animation/FadeAnimation.dart';
 import 'package:delivery_app/States/app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -17,7 +18,18 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Map());
+    return Scaffold(
+        // appBar: AppBar(
+        //   backgroundColor: Colors.white,
+        //   elevation: 0,
+        //   title: Text(
+        //     'Track Your Order',
+        //     style: TextStyle(color: Colors.blue),
+        //   ),
+        //   iconTheme: IconThemeData(color: Colors.blue[300]),
+        // ),
+        // drawer: AppDrawer(),
+        body: Map());
   }
 }
 
@@ -30,31 +42,34 @@ class _MapState extends State<Map> {
   @override
   Widget build(BuildContext context) {
     final appState = Provider.of<AppState>(context);
-    
+
     return SafeArea(
       child: appState.initialPosition == null
           ? Container(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-              SpinKitRotatingCircle(
-              color: Colors.black,
-                size: 50.0,
-              )
-                    ],
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    SpinKitRotatingCircle(
+                      color: Colors.black,
+                      size: 50.0,
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Visibility(
+                  visible: appState.locationServiceActive == false,
+                  child: Text(
+                    "Please enable location services!",
+                    style: TextStyle(color: Colors.grey, fontSize: 18),
                   ),
-                  SizedBox(height: 10,),
-                  Visibility(
-                    visible: appState.locationServiceActive == false,
-                    child: Text("Please enable location services!", style: TextStyle(color: Colors.grey, fontSize: 18),),
-                  )
-                ],
-              )
-            )
-           
+                )
+              ],
+            ))
           : Stack(
               children: <Widget>[
                 GoogleMap(
@@ -68,7 +83,16 @@ class _MapState extends State<Map> {
                   onCameraMove: appState.onCameraMove,
                   polylines: appState.polyLines,
                 ),
-                
+                // Positioned(
+                //   top: 50.0,
+                //   right: 15.0,
+                //   left: 15.0,
+                //   child: Container(
+                //     margin: EdgeInsets.all(150.0),
+                //     decoration: BoxDecoration(
+                //         color: Colors.orange, shape: BoxShape.circle),
+                //   ),
+                // ),
                 Positioned(
                   top: 50.0,
                   right: 15.0,
@@ -87,7 +111,6 @@ class _MapState extends State<Map> {
                             spreadRadius: 3)
                       ],
                     ),
-                    
                     child: TextField(
                       cursorColor: Colors.black,
                       controller: appState.locationController,
@@ -108,7 +131,6 @@ class _MapState extends State<Map> {
                     ),
                   ),
                 ),
-
                 Positioned(
                   top: 105.0,
                   right: 15.0,
@@ -151,6 +173,30 @@ class _MapState extends State<Map> {
                     ),
                   ),
                 ),
+                Positioned(
+                  top: 650.0,
+                  right: 15.0,
+                  left: 15.0,
+
+                  child: Container(
+                    height: MediaQuery.of(context).size.height / 17,
+                    margin: EdgeInsets.symmetric(horizontal: 0),
+                    child: RaisedButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(20)),
+                      color: Colors.blue[300],
+                      onPressed: () async {
+                        Navigator.of(context).pushNamed('/delivery');
+                      },
+                      child: Center(
+                        child: Text(
+                          "Next",
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  ),
 
 //        Positioned(
 //          top: 40,
@@ -160,7 +206,8 @@ class _MapState extends State<Map> {
 //          backgroundColor: black,
 //          child: Icon(Icons.add_location, color: white,),
 //          ),
-//        )
+//        ))
+                ),
               ],
             ),
     );

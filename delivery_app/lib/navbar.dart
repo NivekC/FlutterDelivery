@@ -2,6 +2,7 @@
 import 'package:delivery_app/ParcelGuy/IncomingR.dart';
 import 'package:delivery_app/ParcelGuy/Settings.dart';
 import 'package:delivery_app/ParcelGuy/home.dart';
+import 'package:delivery_app/ParcelGuy/orders.dart';
 import 'package:flutter/material.dart';
 
 class NavBar extends StatefulWidget {
@@ -19,7 +20,7 @@ class _NavBarState extends State<NavBar> {
         'page': IncomingRequest(),
       },
       {
-        'page': PaymentSuccessPage(),
+        'page': ParcelOrders(),
       },
       {
         'page': ChartPage(),
@@ -55,7 +56,7 @@ class _NavBarState extends State<NavBar> {
             icon: Icon(Icons.compare_arrows),
           ),
           BottomNavigationBarItem(
-            title: Text('Payment'),
+            title: Text('Orders'),
             icon: Icon(Icons.payment),
           ),
           BottomNavigationBarItem(

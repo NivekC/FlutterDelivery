@@ -41,9 +41,9 @@ class IncomingRequestState extends State<IncomingRequest> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.blue[300],
+        backgroundColor: Colors.white,
       ),
-      drawer: ParcelDrawer(),
+      
       body: bodyData(),
     );
   }
@@ -130,7 +130,7 @@ class IncomingRequestState extends State<IncomingRequest> {
                   child: ListTile(
                     leading: Icon(
                       FontAwesomeIcons.ccVisa,
-                      color: Themes.color,
+                      color: Colors.black,
                     ),
                     title: Text("Credit/Debit Card"),
                     subtitle: Text("PNB Card ending ***6"),
@@ -142,13 +142,14 @@ class IncomingRequestState extends State<IncomingRequest> {
                     height: 40.0,
                     width: 220,
                     decoration: BoxDecoration(
-                      color: Themes.color,
+                      color: Colors.blue[300],
                       borderRadius: BorderRadius.circular(25.0),
                     ),
                     child: Center(
                       child: Text(
                         "Accept Order",
                         style: TextStyle(
+                          color: Colors.white,
                           fontSize: 18.0,
                           fontWeight: FontWeight.w800,
                         ),
@@ -168,13 +169,14 @@ class IncomingRequestState extends State<IncomingRequest> {
                     height: 40.0,
                     width: 220,
                     decoration: BoxDecoration(
-                      color: Themes.color,
+                      color: Colors.blue[300],
                       borderRadius: BorderRadius.circular(25.0),
                     ),
                     child: Center(
                       child: Text(
                         "Reject Order",
                         style: TextStyle(
+                           color: Colors.white,
                           fontSize: 18.0,
                           fontWeight: FontWeight.w800,
                         ),

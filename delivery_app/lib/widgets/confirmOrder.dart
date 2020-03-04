@@ -1,4 +1,5 @@
 import 'package:delivery_app/location/map.dart';
+import 'package:delivery_app/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
 class ConfirmOrderPage extends StatelessWidget {
@@ -14,6 +15,7 @@ class ConfirmOrderPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Confirm Order"),
       ),
+      drawer: AppDrawer(),
       body: _buildBody(context),
     );
   }
@@ -28,7 +30,7 @@ class ConfirmOrderPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text("Subtotal"),
-              Text("Rs. $total"),
+              Text("KES. $total"),
             ],
           ),
           SizedBox(
@@ -38,7 +40,7 @@ class ConfirmOrderPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text("Delivery fee"),
-              Text("Rs. $delivery"),
+              Text("KES. $delivery"),
             ],
           ),
           SizedBox(
@@ -51,7 +53,7 @@ class ConfirmOrderPage extends StatelessWidget {
                 "Total",
                 style: Theme.of(context).textTheme.title,
               ),
-              Text("Rs. ${total + delivery}",
+              Text("KES. ${total + delivery}",
                   style: Theme.of(context).textTheme.title),
             ],
           ),
@@ -91,13 +93,7 @@ class ConfirmOrderPage extends StatelessWidget {
                 title: Text(phone),
                 onChanged: (value) {},
               ),
-              RadioListTile(
-                selected: false,
-                value: "New Phone",
-                groupValue: phone,
-                title: Text("Choose new contact number"),
-                onChanged: (value) {},
-              ),
+           
             ],
           ),
           SizedBox(

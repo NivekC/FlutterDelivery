@@ -3,6 +3,8 @@ import 'package:delivery_app/providers/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'drawer.dart';
+
 class DeliveryDetails extends StatefulWidget {
   @override
   _DeliveryDetailsState createState() => _DeliveryDetailsState();
@@ -17,15 +19,26 @@ class _DeliveryDetailsState extends State<DeliveryDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        title: Text(
+          'Delivery Details',
+          style: TextStyle(color: Colors.white),
+        ),
+        iconTheme: IconThemeData(color: Colors.white),
+        centerTitle: true,
+        backgroundColor: Colors.blue[300],
+      ),
+      drawer: AppDrawer(),
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             colors: [
-              Colors.blue[100],
-              Colors.blue[100],
-              Colors.blue[100],
+              Colors.blue[300],
+              Colors.blue[300],
+              Colors.blue[300],
             ],
           ),
         ),
@@ -40,24 +53,25 @@ class _DeliveryDetailsState extends State<DeliveryDetails> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  FadeAnimation(
-                      1,
-                      Text(
-                        "Delivery Details",
-                        style: TextStyle(color: Colors.white, fontSize: 50),
-                      )),
+                  // FadeAnimation(
+                  //   1,
+                  //   Text(
+                  //     "Delivery Details",
+                  //     style: TextStyle(color: Colors.white, fontSize: 50),
+                  //   ),
+                  // ),
                   SizedBox(
                     height: 10,
                   ),
-                  Center(
-                    child: FadeAnimation(
-                      1.3,
-                      Image.asset(
-                        'assets/images/Request_pickup.jpg',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
+                  // Center(
+                  //   child: FadeAnimation(
+                  //     1.3,
+                  //     Image.asset(
+                  //       'assets/images/Request_pickup.jpg',
+                  //       fit: BoxFit.cover,
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
             ),
@@ -192,8 +206,8 @@ class _DeliveryDetailsState extends State<DeliveryDetails> {
                                           icon: const Padding(
                                             padding:
                                                 const EdgeInsets.only(top: 5.0),
-                                            child: const Icon(
-                                                Icons.speaker_notes),
+                                            child:
+                                                const Icon(Icons.speaker_notes),
                                           ),
                                           hintStyle:
                                               TextStyle(color: Colors.black),

@@ -3,6 +3,8 @@
 import 'package:delivery_app/ParcelGuy/Chart.dart';
 import 'package:delivery_app/ParcelGuy/IncomingR.dart';
 import 'package:delivery_app/ParcelGuy/Settings.dart';
+import 'package:delivery_app/ParcelGuy/orders.dart';
+import 'package:delivery_app/ParcelGuy/userProfile.dart';
 import 'package:delivery_app/navbar.dart';
 import 'package:delivery_app/paymentpage/debit_card.dart';
 import 'package:delivery_app/paymentpage/payment_page.dart';
@@ -63,7 +65,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home:DeliveryDetails(),
+        home: MyHomePage(),
         routes: {
           '/sign-in': (ctx) => SignIn(),
           '/intro-one': (ctx) => LandingPageOne(),
@@ -83,8 +85,10 @@ class MyApp extends StatelessWidget {
           '/parcelSettings': (ctx) => ParcelSettings(),
           '/charts': (ctx) => ChartPage(),
           '/confirmOrder': (ctx) => ConfirmOrderPage(),
-           '/pickup': (ctx) => PickupDetails(),
-          
+          '/pickup': (ctx) => PickupDetails(),
+          '/delivery': (ctx) => DeliveryDetails(),
+          '/Parcelorders': (ctx) => ParcelOrders(),
+           '/Parcelprofile': (ctx) => ParcelProfilePage(),
         },
       ),
     );
