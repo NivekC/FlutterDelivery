@@ -7,11 +7,19 @@ import 'package:delivery_app/const/themeColor.dart';
 import 'package:delivery_app/paymentpage/payment_success.dart';
 import 'package:delivery_app/widgets/profile_tile.dart';
 
-class CreditCardPage extends StatelessWidget {
+class CreditCardPage extends StatefulWidget {
+  @override
+  _CreditCardPageState createState() => _CreditCardPageState();
+}
+
+class _CreditCardPageState extends State<CreditCardPage> {
   BuildContext _context;
+
   MaskedTextController ccMask =
       MaskedTextController(mask: "0000 0000 0000 0000");
+
   MaskedTextController expMask = MaskedTextController(mask: "00/00");
+
   Widget bodyData() => SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -33,6 +41,7 @@ class CreditCardPage extends StatelessWidget {
           ],
         ),
       );
+
   Widget creditCardWidget() {
     var deviceSize = MediaQuery.of(_context).size;
     return Container(
@@ -195,6 +204,7 @@ class CreditCardPage extends StatelessWidget {
           ],
         ),
       );
+
   Widget floatingBar() => Ink(
         decoration: ShapeDecoration(
           shape: StadiumBorder(),

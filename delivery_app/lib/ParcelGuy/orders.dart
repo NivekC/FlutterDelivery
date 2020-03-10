@@ -3,7 +3,7 @@ import 'package:delivery_app/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class Orders extends StatelessWidget {
+class ParcelOrders extends StatelessWidget {
   final List<Order> previousOrders = [
     Order("NairobiWest - Westlands", DateTime.now(), DateTime.now(), 2000),
     Order("Kilimani - Westlands", DateTime.now(), DateTime.now(), 1000),
@@ -18,19 +18,15 @@ class Orders extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        title: Text(
-          'Orders',
-          style: TextStyle(color: Colors.blue),
-        ),
-        iconTheme: IconThemeData(color: Colors.blue),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-      ),
-      drawer: AppDrawer(),
+      // appBar: AppBar(
+      //   elevation: 0,
+      //   iconTheme: IconThemeData(color: Colors.blue),
+      //   centerTitle: true,
+      //   backgroundColor: Colors.white,
+      // ),
       body: Container(
-        color: Colors.white,
+        padding: EdgeInsets.only(top:25),
+        color:  Colors.white,
         child: new ListView.builder(
           itemCount: previousOrders.length,
           itemBuilder: (BuildContext context, int index) =>
@@ -43,10 +39,10 @@ class Orders extends StatelessWidget {
   Widget buildOrderCard(BuildContext context, int index) {
     final order = previousOrders[index];
     return new Container(
-      color: Colors.grey[200],
+      color:  Colors.grey[200],
       padding: EdgeInsets.fromLTRB(10, 10, 10, 15),
       child: Card(
-        color: Colors.grey[400],
+        color: Colors.white,
         elevation: 10,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0),

@@ -17,16 +17,15 @@ class PaymentSuccessPage extends StatefulWidget {
 class PaymentSuccessPageState extends State<PaymentSuccessPage> {
   bool isDataAvailable = true;
   Widget bodyData() => Container(
-      padding: EdgeInsets.all(20),
+        padding: EdgeInsets.all(20),
         height: MediaQuery.of(context).size.height / 1,
         margin: EdgeInsets.symmetric(horizontal: 50),
         child: Center(
           child: isDataAvailable
               ? RaisedButton(
-                 shape: RoundedRectangleBorder(
-                                borderRadius: new BorderRadius.circular(80),
-                              ),
-                  
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(80),
+                  ),
                   onPressed: () => showSuccessDialog(),
                   color: Colors.blue[300],
                   child: Text("Process Payment"),

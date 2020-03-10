@@ -8,6 +8,7 @@ class AppDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Drawer(
+        
         child: Column(
           children: <Widget>[
             AppBar(
@@ -99,17 +100,32 @@ class AppDrawer extends StatelessWidget {
             // ),
             Divider(),
             Spacer(),
-            ListTile(
+                ListTile(
               leading: Icon(
-                Icons.exit_to_app,
+                Icons.subdirectory_arrow_left,
                 size: 28,
+                color: Colors.blue,
               ),
-              title: Text('Logout'),
+              title: Text(
+                'Parcel',
+                style: TextStyle(color: Colors.black),
+              ),
               onTap: () {
-                Navigator.of(context).popAndPushNamed('/sign-in');
-                //  Provider.of<Authentication>(context, listen: false).logout();
+                Navigator.of(context).pushNamed('/navbar');
               },
             ),
+            Divider(),
+            // ListTile(
+            //   leading: Icon(
+            //     Icons.exit_to_app,
+            //     size: 28,
+            //   ),
+            //   title: Text('Logout'),
+            //   onTap: () {
+            //     Navigator.of(context).popAndPushNamed('/sign-in');
+            //     //  Provider.of<Authentication>(context, listen: false).logout();
+            //   },
+            // ),
           ],
         ),
       ),

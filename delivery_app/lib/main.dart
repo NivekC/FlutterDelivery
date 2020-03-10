@@ -8,7 +8,6 @@ import 'package:delivery_app/ParcelGuy/userProfile.dart';
 import 'package:delivery_app/navbar.dart';
 import 'package:delivery_app/paymentpage/debit_card.dart';
 import 'package:delivery_app/paymentpage/payment_page.dart';
-import 'package:delivery_app/widgets/Home.dart';
 import 'package:delivery_app/widgets/PaymentsOptions.dart';
 import 'package:delivery_app/widgets/code.dart';
 import 'package:delivery_app/widgets/confirmOrder.dart';
@@ -18,6 +17,7 @@ import 'package:delivery_app/widgets/deliveryDetails.dart';
 import 'package:delivery_app/widgets/intro_1.dart';
 import 'package:delivery_app/widgets/intro_2.dart';
 import 'package:delivery_app/widgets/intro_3.dart';
+import 'package:delivery_app/widgets/mapscreen.dart';
 import 'package:delivery_app/widgets/orders.dart';
 import 'package:delivery_app/widgets/phone_verification.dart';
 //import 'package:delivery_app/widgets/rating.dart';
@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: MyHomePage(),
+        home: Map(),
         routes: {
           '/sign-in': (ctx) => SignIn(),
           '/intro-one': (ctx) => LandingPageOne(),
@@ -76,7 +76,7 @@ class MyApp extends StatelessWidget {
           '/Sign-up': (ctx) => SignUp(),
           '/code': (ctx) => Code(),
           '/phone': (ctx) => Phone(),
-          '/map': (ctx) => MyHomePage(),
+          '/map': (ctx) => Map(),
           '/orders': (ctx) => Orders(),
           '/credit': (ctx) => PaymentPage(),
           '/creditpay': (ctx) => CreditCardPage(),
@@ -88,7 +88,9 @@ class MyApp extends StatelessWidget {
           '/pickup': (ctx) => PickupDetails(),
           '/delivery': (ctx) => DeliveryDetails(),
           '/Parcelorders': (ctx) => ParcelOrders(),
-           '/Parcelprofile': (ctx) => ParcelProfilePage(),
+          '/Parcelprofile': (ctx) => ParcelProfilePage(),
+          '/navbar' : (ctx) => NavBar(),
+
         },
       ),
     );
