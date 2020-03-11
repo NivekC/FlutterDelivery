@@ -1,6 +1,5 @@
 import 'package:delivery_app/ParcelGuy/Chart.dart';
 import 'package:delivery_app/ParcelGuy/Settings.dart';
-import 'package:delivery_app/ParcelGuy/orders.dart';
 import 'package:flutter/material.dart';
 import 'ParcelGuy/my-rides.dart';
 

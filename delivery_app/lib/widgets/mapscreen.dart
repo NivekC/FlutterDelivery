@@ -1,4 +1,3 @@
-import 'package:delivery_app/Animation/FadeAnimation.dart';
 import 'package:delivery_app/States/app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';

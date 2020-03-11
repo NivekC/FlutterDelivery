@@ -1,6 +1,5 @@
 import 'package:delivery_app/widgets/drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:delivery_app/const/themeColor.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart';
 

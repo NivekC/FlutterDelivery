@@ -1,7 +1,5 @@
 import 'package:delivery_app/Animation/FadeAnimation.dart';
-import 'package:delivery_app/providers/auth.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import 'drawer.dart';
 

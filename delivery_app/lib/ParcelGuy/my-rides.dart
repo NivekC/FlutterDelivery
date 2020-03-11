@@ -1,6 +1,5 @@
 import 'package:delivery_app/ParcelGuy/ride.dart';
 import 'package:flutter/material.dart';
-import 'Coming.dart';
 import 'cancelled.dart';
 
 class MyRides extends StatelessWidget {
@@ -10,7 +9,15 @@ class MyRides extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text('My Rides', textAlign: TextAlign.center),
+        title: Text(
+          'My Rides',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        iconTheme: IconThemeData(color: Colors.blue),
+        centerTitle: true,
         automaticallyImplyLeading: false,
         elevation: 0.0,
       ),

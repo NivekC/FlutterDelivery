@@ -1,9 +1,7 @@
-import 'package:delivery_app/widgets/drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:delivery_app/const/themeColor.dart';
 import 'package:delivery_app/paymentpage/payment_success.dart';
 import 'package:delivery_app/widgets/profile_tile.dart';
 

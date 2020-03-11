@@ -1,5 +1,4 @@
 import 'package:delivery_app/location/map.dart';
-import 'package:delivery_app/paymentpage/debit_card.dart';
 import 'package:delivery_app/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 

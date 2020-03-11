@@ -11,11 +11,11 @@ class ParcelSettings extends StatelessWidget {
         elevation: 0,
         title: Text(
           'Settings',
-          style: TextStyle(color: Colors.blue),
+          style: TextStyle(color: Colors.white),
         ),
         iconTheme: IconThemeData(color: Colors.blue),
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.blue,
       ),
      
       body: Container(

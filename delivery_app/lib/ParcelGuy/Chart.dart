@@ -1,4 +1,3 @@
-import 'package:delivery_app/ParcelGuy/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -123,7 +122,7 @@ class _ChartPageState extends State<ChartPage> {
           appBar: AppBar(
             backgroundColor: Colors.blue,
             //backgroundColor: Color(0xff308e1c),
-           
+
             bottom: TabBar(
               indicatorColor: Color(0xff9962D0),
               tabs: [

@@ -1,7 +1,5 @@
 import 'package:delivery_app/Animation/FadeAnimation.dart';
-import 'package:delivery_app/providers/auth.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import 'drawer.dart';
 
@@ -14,7 +12,6 @@ class _PickupDetailsState extends State<PickupDetails> {
   final _senderaddresscontroller = TextEditingController();
   final _pickupcontroller = TextEditingController();
   final _sendercontroller = TextEditingController();
-  final _instructionscontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
