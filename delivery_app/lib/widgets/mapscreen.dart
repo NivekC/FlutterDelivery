@@ -59,7 +59,7 @@ class _MapState extends State<Map> {
                 children: <Widget>[
                   GoogleMap(
                     initialCameraPosition: CameraPosition(
-                        target: appState.initialPosition, zoom: 17.0),
+                        target: appState.initialPosition, zoom: 15.0),
                     onMapCreated: appState.onCreated,
                     myLocationEnabled: true,
                     mapType: MapType.normal,
@@ -102,7 +102,6 @@ class _MapState extends State<Map> {
                                 ),
                               ),
                             ),
-                            
                             SizedBox(height: 10),
                             TextField(
                               cursorColor: Colors.black,
@@ -124,8 +123,14 @@ class _MapState extends State<Map> {
                             ),
                             SizedBox(height: 10),
                             RaisedButton(
-                              color: Colors.blue,
-                              child: Text('Next'),
+                              color: Colors.blue[300],
+                              shape: RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(5),
+                              ),
+                              child: Text(
+                                'Next',
+                                style: TextStyle(color: Colors.white),
+                              ),
                               onPressed: () async {
                                 Navigator.of(context).pushNamed('/delivery');
                               },

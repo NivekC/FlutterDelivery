@@ -1,5 +1,3 @@
-//import 'package:delivery_app/custom_drawer/drawer_user_controller.dart';
-//import 'package:delivery_app/models/ordersModel.dart';
 import 'package:delivery_app/ParcelGuy/Chart.dart';
 import 'package:delivery_app/ParcelGuy/IncomingR.dart';
 import 'package:delivery_app/ParcelGuy/Settings.dart';
@@ -11,8 +9,6 @@ import 'package:delivery_app/paymentpage/payment_page.dart';
 import 'package:delivery_app/widgets/PaymentsOptions.dart';
 import 'package:delivery_app/widgets/code.dart';
 import 'package:delivery_app/widgets/confirmOrder.dart';
-// import 'package:delivery_app/widgets/credit_card_form.dart';
-// import 'package:delivery_app/widgets/credit_card_widget.dart';
 import 'package:delivery_app/widgets/deliveryDetails.dart';
 import 'package:delivery_app/widgets/intro_1.dart';
 import 'package:delivery_app/widgets/intro_2.dart';
@@ -20,7 +16,6 @@ import 'package:delivery_app/widgets/intro_3.dart';
 import 'package:delivery_app/widgets/mapscreen.dart';
 import 'package:delivery_app/widgets/orders.dart';
 import 'package:delivery_app/widgets/phone_verification.dart';
-//import 'package:delivery_app/widgets/rating.dart';
 import 'package:delivery_app/widgets/settings.dart';
 import 'package:delivery_app/widgets/sign-up.dart';
 import 'package:delivery_app/widgets/userProfile.dart';
@@ -28,7 +23,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'States/app_state.dart';
 import 'providers/auth.dart';
-
 import 'widgets/pickupDetails.dart';
 import 'widgets/sign_in.dart';
 
@@ -65,7 +59,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: Map(),
+        home: NavBar(),
         routes: {
           '/sign-in': (ctx) => SignIn(),
           '/intro-one': (ctx) => LandingPageOne(),
@@ -89,8 +83,7 @@ class MyApp extends StatelessWidget {
           '/delivery': (ctx) => DeliveryDetails(),
           '/Parcelorders': (ctx) => ParcelOrders(),
           '/Parcelprofile': (ctx) => ParcelProfilePage(),
-          '/navbar' : (ctx) => NavBar(),
-
+          '/navbar': (ctx) => NavBar(),
         },
       ),
     );

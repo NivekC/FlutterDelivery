@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'drawer.dart';
 
 class ParcelSettings extends StatelessWidget {
   @override
@@ -8,6 +7,7 @@ class ParcelSettings extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        
         elevation: 0,
         title: Text(
           'Settings',
